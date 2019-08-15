@@ -24,7 +24,7 @@
 ;; reverse list
 (defun my-reverse (list1)
   (cond ((null list1) nil)
-        (t (my-append (my reverse (cdr list1)) (list (car list1))))))
+        (t (my-append (my-reverse (cdr list1)) (list (car list1))))))
 
 (defun lifeline-helper (conf gen)
   (cond ((= gen 0) nil)
