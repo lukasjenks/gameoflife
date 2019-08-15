@@ -57,7 +57,7 @@
 ;; function to count live neighbours
 (defun neigh-alive (cell cur-gen)
   (cond ((null cur-gen) 0)
-        (t (+ (is-neigh celll (car cur-gen)) (neigh-alive cell (cdr cur-gen))))))
+        (t (+ (is-neigh cell (car cur-gen)) (neigh-alive cell (cdr cur-gen))))))
 
 ;; function to limit neighbours to the two elements on either side of the current cell
 (defun is-neigh (cell potential)
